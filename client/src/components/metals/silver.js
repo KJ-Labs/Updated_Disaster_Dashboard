@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Stocks extends React.Component {
+class Silver extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -26,7 +26,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
+fetch("https://www.goldapi.io/api/XAG/USD", requestOptions)
   .then(response => response.text())
   .then(result => this.setState({apiResults: JSON.parse(result)}))
   .catch(error => console.log('error', error));
@@ -36,7 +36,7 @@ fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
   render() {
     return(
       <div className='card-item'>
-          <h1>{ 'Gold Price ' + this.state.apiResults.price}</h1>
+          <h1>{ 'Silver Price ' + this.state.apiResults.price}</h1>
 
       </div>
     );
@@ -45,4 +45,4 @@ fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
 
 
 
-export default Stocks;
+export default Silver;

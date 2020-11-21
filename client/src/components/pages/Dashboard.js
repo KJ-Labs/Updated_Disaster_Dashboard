@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReadyKit from '../readykit';
-import Stocks from '../stocks/stocks.js';
+import Stocks from '../metals/gold.js';
+import Silver from '../metals/silver.js';
 import Meteroids from '../meteroids/meteroids.js';
 
 class Dashboard extends Component {
@@ -25,6 +26,11 @@ class Dashboard extends Component {
           <div id='app'></div>
           <div className="card" id = 'stock'>
           <Stocks/>
+          </div>
+          <br></br>
+          <div id='app'></div>
+          <div className="card" id = 'silver'>
+          <Silver/>
           </div>
           <br></br>
           <div id='app'></div>
