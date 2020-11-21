@@ -19,7 +19,7 @@ class Dashboard extends Component {
         <div id='app'></div>
           <div className="card" id = 'disaster'>
             <h2>Disaster Data Goes Here</h2>
-              <p>ML Data</p>
+              <p>MI Data</p>
           </div>
           <br></br>
           <div id='app'></div>
@@ -41,9 +41,10 @@ class Dashboard extends Component {
           <br></br>
           <div id='app'></div>
           <div className="card" id = 'ReadyKit'>
-            <h2></h2>
+            <h2>{this.state.currentUserName}'s Ready Kit</h2>
+            <ReadyKit username={this.state.currentUserName}></ReadyKit>
           </div>
-          <ReadyKit username={this.state.currentUserName}></ReadyKit>
+
       </div>
 
     );
