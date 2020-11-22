@@ -4,9 +4,7 @@ class Stocks extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      apiKey: 'goldapi-g8eiukhi5pe0t-io',
       apiResults: '',
-
     }
 
   }

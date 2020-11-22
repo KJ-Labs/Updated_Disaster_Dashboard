@@ -38,15 +38,15 @@ class Dashboard extends Component {
           <br></br>
           <div id='app'></div>
           <div className="card" id = 'nasa'>
-     <Meteroids/>
+    <Meteroids/>
           </div>
           <br></br>
+
           <div id='app'></div>
           <div className="card" id = 'covid'>
             <h2>Covid Data Goes Here</h2>
               <p>MW Data</p>
           </div>
-          <br></br>
           <br></br>
           <div id='app'></div>
           <div className="card" id = 'ReadyKit'>

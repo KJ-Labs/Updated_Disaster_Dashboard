@@ -7,10 +7,8 @@ class Meteroid extends React.Component {
       apiKey: 'Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt',
       apiResults: [],
       todayDate: new Date().toISOString().slice(0,10),
-
     }
   }
-
 componentDidMount() {
     this.loadData()
   }
@@ -29,11 +27,24 @@ fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.todayDate}&
 
 for (var i = 0 ; i < 5; i++) {
 let finalData =  []
-finalData.push(apiData[i])
-  console.log(finalData)
+console.log(apiData[0])
+finalData.push(apiData[i].name)
+
   this.setState({
     apiResults: finalData
   })
+
+//console.log(this.state.apiResults[0].close_approach_data[0].orbiting_body)
+//console.log(this.state.apiResults[0].name)
+//console.log(this.state.apiResults[0].is_potentially_hazardous_asteroid)
+//console.log(this.state.apiResults[0].estimated_diameter.kilometers)
+//console.log(this.state.apiResults[0].estimated_diameter.miles)
+//console.log(this.state.apiResults[0].close_approach_data[0].relative_velocity.miles_per_hour)
+//console.log(this.state.apiResults[0].close_approach_data[0].relative_velocity.kilometers_per_hour)
+//console.log(this.state.apiResults[0].close_approach_data[0].miss_distance.kilometers)
+//console.log(this.state.apiResults[0].close_approach_data[0].miss_distance.miles)
+//console.log(this.state.apiResults[0].nasa_jpl_url)
+
 }
   })
   .catch(error => console.log('error', error));
@@ -42,7 +53,8 @@ finalData.push(apiData[i])
   render() {
     return(
       <div className='card-item'>
-        { <p>{ JSON.stringify(this.state.apiResults)}</p> }
+        { <p>{ JSON.stringify(this.state.apiResults[0])}</p> }
+        { <p>{ JSON.stringify(this.state.apiResults[1])}</p> }
       </div>
     );
   }
