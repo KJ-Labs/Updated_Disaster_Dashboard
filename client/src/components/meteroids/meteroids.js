@@ -1,12 +1,13 @@
 import React from 'react';
 
+
 class Meteroid extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       apiKey: 'goldapi-g8eiukhi5pe0t-io',
       apiResults: [],
-
+      todayDate: new Date().toISOString().slice(0,10)
 
     }
   }
@@ -21,13 +22,13 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-09-17&end_date=2020-09-17&api_key=Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt ", requestOptions)
+fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.todayDate}&end_date=${this.state.todayDate}&api_key=Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt`, requestOptions)
   .then(response => response.text())
   .then(result => this.setState({apiResults: JSON.parse(result)}))
   .then(result => console.log(this.state.apiResults))
   .then(result => {
     this.setState({
-      apiResults: result.near_earth_objects[0]
+      apiResults: result.near_earth_objects
     })
   })
   .catch(error => console.log('error', error));
