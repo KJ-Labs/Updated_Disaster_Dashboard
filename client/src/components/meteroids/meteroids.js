@@ -27,7 +27,7 @@ fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.todayDate}&
 
 for (var i = 0 ; i < 5; i++) {
 let finalData =  []
-console.log(apiData[0])
+console.log(apiData[i].name)
 finalData.push(apiData[i].name)
 
   this.setState({
