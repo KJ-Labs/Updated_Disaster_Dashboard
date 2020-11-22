@@ -39,15 +39,10 @@ finalData.push(apiData[i])
   .catch(error => console.log('error', error));
   }
 
-
-
   render() {
-
     return(
       <div className='card-item'>
-        {<h1>Space Data Here </h1>}
-
-        { <h1>{ 'Space ' + JSON.stringify(this.state.apiResults)}</h1> }
+        { <p>{ JSON.stringify(this.state.apiResults)}</p> }
       </div>
     );
   }
