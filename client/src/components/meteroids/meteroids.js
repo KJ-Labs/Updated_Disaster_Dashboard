@@ -7,7 +7,8 @@ class Meteroid extends React.Component {
     this.state = {
       apiKey: 'goldapi-g8eiukhi5pe0t-io',
       apiResults: [],
-      todayDate: new Date().toISOString().slice(0,10)
+      todayDate: new Date().toISOString().slice(0,10),
+
 
     }
   }
@@ -25,7 +26,14 @@ var requestOptions = {
 fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.todayDate}&end_date=${this.state.todayDate}&api_key=Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt`, requestOptions)
   .then(response => response.text())
   .then(result => this.setState({apiResults: JSON.parse(result)}))
-  .then(result => console.log(this.state.apiResults))
+  .then(result => {
+    var currentdate = this.state.apiResults.near_earth_objects[this.state.todayDate.toString()]
+
+for (var i = 0 ; i < 5; i++) {
+  console.log(currentdate[i])
+}
+
+  })
   .then(result => {
     this.setState({
       apiResults: result.near_earth_objects
