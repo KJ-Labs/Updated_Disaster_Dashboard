@@ -6,15 +6,13 @@ class Meteroid extends React.Component {
     this.state = {
       apiKey: 'goldapi-g8eiukhi5pe0t-io',
       apiResults: [],
-      updatedResults: []
+
 
     }
   }
 
 componentDidMount() {
     this.loadData()
-
-
   }
 
 loadData() {
@@ -26,11 +24,10 @@ var requestOptions = {
 fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-09-17&end_date=2020-09-17&api_key=Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt ", requestOptions)
   .then(response => response.text())
   .then(result => this.setState({apiResults: JSON.parse(result)}))
+  .then(result => console.log(this.state.apiResults))
   .then(result => {
-    let updatedResults = result.near_earth_objects.slice(0,3);
     this.setState({
-      apiResults: result,
-      updatedResults: result
+      apiResults: result.near_earth_objects[0]
     })
   })
   .catch(error => console.log('error', error));
