@@ -7,7 +7,7 @@ function getDisasterEvents(callback) {
     const disasters = events.map(event => { return {
       title: event.title,
       geometry: event.geometry[0].coordinates,
-      date: event.geometry[0].date,
+      date: event.geometry[0].date.substring(0, 10),
       category: event.categories[0].title
     }
     });

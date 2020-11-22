@@ -19,9 +19,9 @@ class Disasters extends React.Component {
     return (
       <div>
         {this.state.disasters.map((disaster, index) => (
-          <li key={index}>
-            {disaster.title} {disaster.geometry} {disaster.date} {disaster.category}
-          </li>
+          <ul key={index}>
+            {index}. {disaster.title} coordinates: {disaster.geometry[0].toFixed(2)}(lat), {disaster.geometry[1].toFixed(2)}(lon) date: {disaster.date} category: {disaster.category}
+          </ul>
         ))}
       </div>
     );
