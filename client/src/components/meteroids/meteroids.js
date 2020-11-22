@@ -12,8 +12,8 @@ class Meteroid extends React.Component {
   }
 
 componentDidMount() {
-    this.loadData(),
-    this.otherFunction()
+    this.loadData()
+
 
   }
 
@@ -23,16 +23,20 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-09-17&end_date=2020-09-17&api_key=Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt", requestOptions)
+fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-09-17&end_date=2020-09-17&api_key=Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt ", requestOptions)
   .then(response => response.text())
   .then(result => this.setState({apiResults: JSON.parse(result)}))
+  .then(result => {
+    let updatedResults = result.near_earth_objects.slice(0,3);
+    this.setState({
+      apiResults: result,
+      updatedResults: result
+    })
+  })
   .catch(error => console.log('error', error));
   }
 
-  otherFunction() {
-    this.setState({apiResults: this.state.apiResults.near_earth_objects})
-this.setState({updatedResults: apiResults.slice(1,3)})
-  }
+
 
   render() {
 
@@ -40,7 +44,7 @@ this.setState({updatedResults: apiResults.slice(1,3)})
       <div className='card-item'>
         {<h1>Space Data Here </h1>}
 
-        { <h1>{ 'Space ' + JSON.stringify(this.state.updatedResults)}</h1> }
+        { <h1>{ 'Space ' + JSON.stringify(this.state.apiResults)}</h1> }
       </div>
     );
   }
