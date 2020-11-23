@@ -32,8 +32,8 @@ let meteroids =
 Name : ` ` + apiData[i].name ,
 'Hazardous' : ` ` + apiData[i].is_potentially_hazardous_asteroid,
 'Diameter in Miles' : ` ` + apiData[i].estimated_diameter.miles.estimated_diameter_max.toFixed(2),
-'Earth Miss Distance Miles' : ` ` + apiData[i].close_approach_data[0].miss_distance.miles,
-'Velocity in MPH' : ` ` + apiData[i].close_approach_data[0].relative_velocity.miles_per_hour
+'Earth Miss Distance Miles' : ` ` + Number(apiData[i].close_approach_data[0].miss_distance.miles).toFixed(2),
+'Velocity in MPH' : ` ` + Number(apiData[i].close_approach_data[0].relative_velocity.miles_per_hour).toFixed(2)
 }
 finalData.push(meteroids)
 
@@ -49,7 +49,7 @@ this.setState({
   render() {
     return(
       <div>
-        { <p>{ JSON.stringify(this.state.apiResults).replace(/,/g, ' -- ').replace(/"/g, "").replace(/}/g, '\n').replace(/{/g, '\n').replace(/\[/g,'').replace(/\]/g,'')}</p> }
+        { <p>{ JSON.stringify(this.state.apiResults).replace(/,/g, ' --  ').replace(/"/g, "").replace(/}/g, '\n').replace(/{/g, '\n').replace(/\[/g,'').replace(/\]/g,'')}</p> }
       </div>
     );
   }
