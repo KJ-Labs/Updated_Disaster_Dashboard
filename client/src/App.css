@@ -1,40 +1,51 @@
-
 @import url(//fonts.googleapis.com/css?family=Oswald:400);
 body {
   background: #222428;
   font-family: "Oswald", sans-serif;
   text-align: center;
-  background-image: linear-gradient(to right, rgba(61,99,246, .5),  rgba(0,196,204 ),rgba(107,213,227) );
+  background-image: linear-gradient(
+    to right,
+    rgba(61, 99, 246, 0.5),
+    rgba(0, 196, 204),
+    rgba(107, 213, 227)
+  );
 }
 
-
-.navbar-brand { font-size: 60px;
-    height: 90px;
-
+.navbar-brand {
+  font-size: 60px;
+  height: 90px;
 }
-  .sidebar {
-    position: absolute;
-    top: 106px;
-    width: 320px;
-    min-height: 110%;
-    background: rgb(109, 122, 134);
-  }
-  .wrapper {
-      text-align: center;
-      margin-left: 10px;
-  }
-
+.sidebar {
+  position: absolute;
+  top: 106px;
+  width: 320px;
+  min-height: 110%;
+  background: rgb(109, 122, 134);
+}
+.wrapper {
+  text-align: center;
+  margin-left: 10px;
+}
 
 footer {
-    margin-top: 229px;
-    background-color: #343A40;
-    width: auto;
-    height: 120px;
-    position: inline-block;
-    }
+  margin-top: 229px;
+  background-color: #343a40;
+  width: auto;
+  height: 120px;
+  position: inline-block;
+}
 
 #nasa {
+  font-size: 20px;
+}
+#MetalsCards {
+  margin-bottom: 50px;
+}
 
- font-size: 18px;
+#gold {
+  margin-right: 10px;
+}
 
+#DisasterContainer {
+  margin-top: 20px;
 }

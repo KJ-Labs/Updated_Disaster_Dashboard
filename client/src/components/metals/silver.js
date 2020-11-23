@@ -9,14 +9,14 @@ class Silver extends React.Component {
     }
 
   }
-
+  //goldapi-40tkpukhtpozy5-io just to avoid hitting cap before presentation
   componentDidMount() {
     this.loadImage();
   }
 
   loadImage() {
 var myHeaders = new Headers();
-myHeaders.append("x-access-token", "goldapi-g8eiukhi5pe0t-io");
+myHeaders.append("x-access-token", "");
 myHeaders.append("Content-Type", "application/json");
 
 var requestOptions = {

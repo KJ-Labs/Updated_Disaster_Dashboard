@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ListItem, List } from "../list";
 
+
 class Meteroid extends React.Component {
   constructor(props) {
     super(props);
@@ -35,7 +36,7 @@ class Meteroid extends React.Component {
             Name: ` ` + apiData[i].name,
             'Hazardous': ` ` + apiData[i].is_potentially_hazardous_asteroid,
             'MilesDiameter': ` ` + apiData[i].estimated_diameter.miles.estimated_diameter_max.toFixed(2),
-            'MissEarth': ` ` + Number(apiData[i].close_approach_data[0].miss_distance.miles).toFixed(2),
+            'MissEarth': ` ` + Number(apiData[i].close_approach_data[0].miss_distance.miles).toFixed(2).toLocaleString('en'),
             'VelocityMPH': ` ` + Number(apiData[i].close_approach_data[0].relative_velocity.miles_per_hour).toFixed(2)
           }
           finalData.push(meteroids)
@@ -56,18 +57,16 @@ class Meteroid extends React.Component {
         {/* { <p>{JSON.stringify(this.state.apiResults.Name)}</p>} */}
         {this.state.apiResults.length ? (
         <List>
-          <h3 className="mb-5 mt-5">Space Events</h3>
+
+          <h3 className="mb-3 mt-3" >Meteor Events  <img src={process.env.PUBLIC_URL + '/assets/images/comet.png'} /> </h3>
           {this.state.apiResults.map(result => (
             <ListItem>
-
-                Meteroid Name:{result.Name} - Danger to Earth: {result.Hazardous.toUpperCase()} - Diameter: {result.MilesDiameter} Miles - Avoided Earth by: {result.MissEarth} Miles - Velocity: {result.VelocityMPH} MPH
-
-
+Meteor Name:{result.Name} - Danger to Earth: {result.Hazardous.toUpperCase()} - Diameter: {result.MilesDiameter} Miles - Avoided Earth by: {result.MissEarth} Miles - Velocity: {result.VelocityMPH} MPH
             </ListItem>
           ))}
         </List>
       ) : (
-        <h3>You haven't added any favorites yet!</h3>
+        <h3>Nothin happenin in space...</h3>
       )}
       </div>
     );
