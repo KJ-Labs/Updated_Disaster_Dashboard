@@ -1,55 +1,74 @@
 import React from 'react';
 
+import { ListItem, List } from "../list";
+
 class Meteroid extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       apiKey: 'Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt',
       apiResults: [],
-      todayDate: new Date().toISOString().slice(0,10),
+      todayDate: new Date().toISOString().slice(0, 10),
     }
   }
-componentDidMount() {
+  componentDidMount() {
     this.loadData()
   }
-loadData() {
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
-};
-fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.todayDate}&end_date=${this.state.todayDate}&api_key=${this.state.apiKey}`, requestOptions)
-  .then(response => response.text())
-  .then(result => this.setState({apiResults: JSON.parse(result)}))
-  .then(result => {
-  var apiData = this.state.apiResults.near_earth_objects[this.state.todayDate.toString()]
-  let finalData =  []
+  loadData() {
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.todayDate}&end_date=${this.state.todayDate}&api_key=${this.state.apiKey}`, requestOptions)
+      .then(response => response.text())
+      .then(result => this.setState({ apiResults: JSON.parse(result) }))
+      .then(result => {
+        var apiData = this.state.apiResults.near_earth_objects[this.state.todayDate.toString()]
+        let finalData = []
 
-for (var i = 0 ; i < 5; i++) {
-  console.log(apiData[i].close_approach_data[0].miss_distance.miles)
-let meteroids =
+        for (var i = 0; i < 5; i++) {
 
-{'#': i+1,
-Name : ` ` + apiData[i].name ,
-'Hazardous' : ` ` + apiData[i].is_potentially_hazardous_asteroid,
-'Diameter in Miles' : ` ` + apiData[i].estimated_diameter.miles.estimated_diameter_max.toFixed(2),
-'Earth Miss Distance Miles' : ` ` + Number(apiData[i].close_approach_data[0].miss_distance.miles).toFixed(2),
-'Velocity in MPH' : ` ` + Number(apiData[i].close_approach_data[0].relative_velocity.miles_per_hour).toFixed(2)
-}
-finalData.push(meteroids)
+          let meteroids =
 
-}
-this.setState({
-  apiResults:   finalData
+          {
+            '#': i + 1,
+            Name: ` ` + apiData[i].name,
+            'Hazardous': ` ` + apiData[i].is_potentially_hazardous_asteroid,
+            'MilesDiameter': ` ` + apiData[i].estimated_diameter.miles.estimated_diameter_max.toFixed(2),
+            'MissEarth': ` ` + Number(apiData[i].close_approach_data[0].miss_distance.miles).toFixed(2),
+            'VelocityMPH': ` ` + Number(apiData[i].close_approach_data[0].relative_velocity.miles_per_hour).toFixed(2)
+          }
+          finalData.push(meteroids)
 
-})
-  })
-  .catch(error => console.log('error', error));
+        }
+        this.setState({
+          apiResults: finalData
+
+        })
+        // console.log("this.state.apiResults", this.state.apiResults)
+      })
+      .catch(error => console.log('error', error));
   }
 
   render() {
-    return(
+    return (
       <div>
-        { <p>{ JSON.stringify(this.state.apiResults).replace(/,/g, ' --  ').replace(/"/g, "").replace(/}/g, '\n').replace(/{/g, '\n').replace(/\[/g,'').replace(/\]/g,'')}</p> }
+        {/* { <p>{JSON.stringify(this.state.apiResults.Name)}</p>} */}
+        {this.state.apiResults.length ? (
+        <List>
+          <h3 className="mb-5 mt-5">Space Events</h3>
+          {this.state.apiResults.map(result => (
+            <ListItem>
+
+                Meteroid Name:{result.Name} - Danger to Earth: {result.Hazardous.toUpperCase()} - Diameter: {result.MilesDiameter} Miles - Avoided Earth by: {result.MissEarth} Miles - Velocity: {result.VelocityMPH} MPH
+
+
+            </ListItem>
+          ))}
+        </List>
+      ) : (
+        <h3>You haven't added any favorites yet!</h3>
+      )}
       </div>
     );
   }
