@@ -36,8 +36,8 @@ class App extends Component {
                   <Login baseUrl="https://dev-1958578.okta.com" />
                 )}
               />
-              <SecureRoute path="/implicit/callback" component={ImplicitCallback} />
-              <SecureRoute path="/puppies" exact={true} component={RandomGif} />
+              <Route path="/implicit/callback" component={ImplicitCallback} />
+              <Route path="/puppies" exact={true} component={RandomGif} />
             </div>
           </div>
         </Security>
