@@ -17,6 +17,7 @@ class Disasters extends React.Component {
 
   render() {
     return (
+
       <div>
         {this.state.disasters.map((disaster, index) => (
           <ul key={index}>
