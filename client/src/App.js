@@ -37,7 +37,7 @@ class App extends Component {
                 )}
               />
               <SecureRoute path="/implicit/callback" component={ImplicitCallback} />
-              <SecureRoute path="/api/readykit" component={ImplicitCallback} />
+              <SecureRoute path="/api" component={ImplicitCallback} />
               <SecureRoute path="/puppies" exact={true} component={RandomGif} />
             </div>
           </div>
