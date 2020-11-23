@@ -23,37 +23,38 @@ fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.state.todayDate}&
   .then(result => {
   var apiData = this.state.apiResults.near_earth_objects[this.state.todayDate.toString()]
   let finalData =  []
+
 for (var i = 0 ; i < 5; i++) {
+  console.log(apiData[i].close_approach_data[0].miss_distance.miles)
 let meteroids =
-{Name: apiData[i].name ,
-Potentially_Hazerdous: apiData[i].is_potentially_hazardous_asteroid,
-Orbiting_Body : apiData[i].close_approach_data[0].orbiting_body,
-Diameter_Miles: apiData[i].estimated_diameter.miles,
-Earth_Miss_Distance_Miles: apiData[i].close_approach_data[0].miss_distance.miles,
-Velocity_Miles: apiData[i].close_approach_data[0].relative_velocity.kilometers_per_hour
+
+{'#': i+1,
+Name : ` ` + apiData[i].name ,
+'Hazardous' : ` ` + apiData[i].is_potentially_hazardous_asteroid,
+'Diameter in Miles' : ` ` + apiData[i].estimated_diameter.miles.estimated_diameter_max.toFixed(2),
+'Earth Miss Distance Miles' : ` ` + apiData[i].close_approach_data[0].miss_distance.miles,
+'Velocity in MPH' : ` ` + apiData[i].close_approach_data[0].relative_velocity.miles_per_hour
 }
 finalData.push(meteroids)
+
 }
 this.setState({
-  apiResults: finalData
+  apiResults:   finalData
+
 })
   })
   .catch(error => console.log('error', error));
   }
 
-
-
-
-
   render() {
     return(
-      <div className='card-item'>
-        { <p>{ JSON.stringify(this.state.apiResults)}</p> }
-
+      <div>
+        { <p>{ JSON.stringify(this.state.apiResults).replace(/,/g, ' -- ').replace(/"/g, "").replace(/}/g, '\n').replace(/{/g, '\n').replace(/\[/g,'').replace(/\]/g,'')}</p> }
       </div>
     );
   }
 }
+
 
 
 export default Meteroid;
