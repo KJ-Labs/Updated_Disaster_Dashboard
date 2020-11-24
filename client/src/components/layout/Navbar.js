@@ -30,11 +30,7 @@ class Navbar extends Component {
                   Dashboard
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Puppies">
-                  Puppies
-                </Link>
-              </li>
+
             </ul>
           </div>
         </div>
