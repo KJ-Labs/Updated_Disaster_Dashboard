@@ -8,9 +8,10 @@ class RandomGif extends React.Component {
     this.state = {
       imageSrc: '',
       keyword: 'cute puppies',
-      apiKey: 'afea92ac6eff442ba6fca79368717d0d',
+      apiKey: `${process.env.REACT_APP_PUPPIES}`,
     }
 
+    //process.env.REACT_APP_PUPPIES
     this.loadImage = this.loadImage.bind(this);
   }
 

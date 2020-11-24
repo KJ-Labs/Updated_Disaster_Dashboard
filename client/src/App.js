@@ -13,11 +13,13 @@ import './App.css';
 
 function onAuthRequired({ history }) {
   history.push('/login');
+
 }
 
 class App extends Component {
   render() {
     return (
+
       <Router>
         <Security
           issuer="https://dev-1958578.okta.com/oauth2/default"

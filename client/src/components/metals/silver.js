@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Silver extends React.Component {
   constructor(props){
     super(props);
@@ -9,14 +10,16 @@ class Silver extends React.Component {
     }
 
   }
-  //goldapi-40tkpukhtpozy5-io just to avoid hitting cap before presentation
+
   componentDidMount() {
     this.loadImage();
   }
 
+  //Commenting out just to avoid hitting cap before presentation
   loadImage() {
 var myHeaders = new Headers();
-myHeaders.append("x-access-token", "");
+myHeaders.append("x-access-token",  'process.env.REACT_APP_METALAPIS');
+console.log(process)
 myHeaders.append("Content-Type", "application/json");
 
 var requestOptions = {

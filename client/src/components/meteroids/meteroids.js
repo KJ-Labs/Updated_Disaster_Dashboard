@@ -7,7 +7,7 @@ class Meteroid extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      apiKey: 'Xb92XHUJvws2bncI1waLvjbgwiVnIiukwsFsRIXt',
+      apiKey:`${process.env.REACT_APP_METEORS}`,
       apiResults: [],
       todayDate: new Date().toISOString().slice(0, 10),
     }

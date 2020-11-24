@@ -13,10 +13,10 @@ class Stocks extends React.Component {
     this.loadImage();
   }
 
-  //goldapi-40tkpukhtpozy5-io just to avoid hitting cap before presentation
+  //Commenting out just to avoid hitting cap before presentation
   loadImage() {
 var myHeaders = new Headers();
-myHeaders.append("x-access-token", "");
+myHeaders.append("x-access-token", 'process.env.REACT_APP_METALAPIS');
 myHeaders.append("Content-Type", "application/json");
 
 var requestOptions = {

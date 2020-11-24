@@ -4,7 +4,7 @@ import Gold from '../metals/gold.js';
 import Silver from '../metals/silver.js';
 import Meteroids from '../meteroids/meteroids.js';
 import Disasters from '../../components/disasters';
-
+import { ListItem } from "../list";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -22,13 +22,17 @@ class Dashboard extends Component {
 
 <div className ='MetalsContainer'>
         <div className  = 'row' id = 'MetalsCards'>
-          <div className="col s5 m5 l5 card" id = 'gold'>
+          <div className="col s6 m6 l6 card" id = 'gold'>
             <h3 className="mb-3 mt-3">  Gold Spot Price<img src={process.env.PUBLIC_URL + '/assets/images/goldbars.png'} alt = 'goldbars' /></h3>
+            <ListItem>
           <Gold/>
+          </ListItem>
           </div>
-          <div className="col s5 m5 l5 card"  id = 'silver'>
+          <div className="col s6 m6 l6 card"  id = 'silver'>
           <h3 className="mb-3 mt-3">Silver Spot Price<img src={process.env.PUBLIC_URL + '/assets/images/silverbars.png'}  alt = 'silverbars' /></h3>
+          <ListItem>
           <Silver/>
+          </ListItem>
           </div>
           </div>
 
@@ -42,15 +46,17 @@ class Dashboard extends Component {
 
         <div id='app'></div>
           <div className="card" id = 'disaster'>
-            <h2>10 current and most recent disasters</h2>
+          <h3 className="mb-3 mt-3">Disasters<img src={process.env.PUBLIC_URL + '/assets/images/disasters.png'}  alt = 'disasters' /></h3>
               <Disasters></Disasters>
           </div>
           <br></br>
 
           <div id='app'></div>
           <div className="card" id = 'covid'>
-            <h2>Covid Data Goes Here</h2>
-              <p>MW Data</p>
+          <h3 className="mb-3 mt-3">Covid Data Here<img src={process.env.PUBLIC_URL + '/assets/images/covid.png'}  alt = 'covid' /></h3>
+          <ListItem>
+             { console.log(`API KEY CHECK + ${process.env.REACT_APP_METALAPIS}`)}
+             </ListItem>
           </div>
           <br></br>
           <div id='app'></div>
