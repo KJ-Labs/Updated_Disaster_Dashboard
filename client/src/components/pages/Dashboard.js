@@ -6,6 +6,7 @@ import Silver from '../metals/silver.js';
 import Meteroids from '../meteroids/meteroids.js';
 import Disasters from '../../components/disasters';
 import { ListItem } from "../list";
+import CovidSearchResults from '../covid/CovidSearchResults.js';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -66,9 +67,9 @@ class Dashboard extends Component {
 
           <div id='app'></div>
           <div className="card" id = 'covid'>
-          <h3 className="mb-3 mt-3"><img src={process.env.PUBLIC_URL + '/assets/images/covid.png'}  alt = 'covid' />Covid Data Here</h3>
+          <h3 className="mb-3 mt-3">Covid Data Here<img src={process.env.PUBLIC_URL + '/assets/images/covid.png'}  alt = 'covid' /></h3>
           <ListItem>
-             { console.log(`API KEY CHECK + ${process.env.REACT_APP_METALAPIS}`)}
+             <CovidSearchResults/>
              </ListItem>
           </div>
           <br></br>
