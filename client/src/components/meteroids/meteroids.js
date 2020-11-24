@@ -32,7 +32,7 @@ class Meteroid extends React.Component {
           let meteroids =
 
           {
-            '#': i + 1,
+            'id': i + 1,
             Name: ` ` + apiData[i].name,
             'Hazardous': ` ` + apiData[i].is_potentially_hazardous_asteroid,
             'MilesDiameter': ` ` + apiData[i].estimated_diameter.miles.estimated_diameter_max.toFixed(2),
@@ -58,10 +58,10 @@ class Meteroid extends React.Component {
         {this.state.apiResults.length ? (
         <List>
 
-          <h3 className="mb-3 mt-3" >Meteor Events  <img src={process.env.PUBLIC_URL + '/assets/images/comet.png'} /> </h3>
+          <h3 className="mb-3 mt-3" >Meteor Events  <img src={process.env.PUBLIC_URL + '/assets/images/comet.png'}  alt = 'meteroid'/> </h3>
           {this.state.apiResults.map(result => (
-            <ListItem>
-Meteor Name:{result.Name} - Danger to Earth: {result.Hazardous.toUpperCase()} - Diameter: {result.MilesDiameter} Miles - Avoided Earth by: {result.MissEarth} Miles - Velocity: {result.VelocityMPH} MPH
+      <ListItem key={result.id}>
+              Meteor Name:{result.Name} - Danger to Earth: {result.Hazardous.toUpperCase()} - Diameter: {result.MilesDiameter} Miles - Avoided Earth by: {result.MissEarth} Miles - Velocity: {result.VelocityMPH} MPH
             </ListItem>
           ))}
         </List>

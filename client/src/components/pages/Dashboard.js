@@ -23,11 +23,11 @@ class Dashboard extends Component {
 <div className ='MetalsContainer'>
         <div className  = 'row' id = 'MetalsCards'>
           <div className="col s5 m5 l5 card" id = 'gold'>
-            <h3 className="mb-3 mt-3">  Gold Spot Price<img src={process.env.PUBLIC_URL + '/assets/images/goldbars.png'} /></h3>
+            <h3 className="mb-3 mt-3">  Gold Spot Price<img src={process.env.PUBLIC_URL + '/assets/images/goldbars.png'} alt = 'goldbars' /></h3>
           <Gold/>
           </div>
           <div className="col s5 m5 l5 card"  id = 'silver'>
-          <h3 className="mb-3 mt-3">Silver Spot Price<img src={process.env.PUBLIC_URL + '/assets/images/silverbars.png'} /></h3>
+          <h3 className="mb-3 mt-3">Silver Spot Price<img src={process.env.PUBLIC_URL + '/assets/images/silverbars.png'}  alt = 'silverbars' /></h3>
           <Silver/>
           </div>
           </div>

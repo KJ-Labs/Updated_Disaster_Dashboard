@@ -1,23 +1,5 @@
 [
   {
-    "currentUserName": "Melinda Ivanov",
-    "water": true,
-    "non_perishable_food": false,
-    "radio": false,
-    "batteries": true,
-    "flashlight": false,
-    "first_aid_kit": true,
-    "whistle": true,
-    "dust_mask": true,
-    "moist_towlettes": true,
-    "garbadge_bags": false,
-    "wrench": false,
-    "can_opener": true,
-    "local_map": false,
-    "cash": true,
-    "medications": true
-  },
-  {
     "currentUserName": "Joo Heredia",
     "water": false,
     "non_perishable_food": true,
