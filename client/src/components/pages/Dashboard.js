@@ -59,14 +59,12 @@ class Dashboard extends Component {
           <br></br>
 
 
+<SimpleMap/>
         <div id='app'></div>
           <div className="card" id = 'disaster'>
           <h3 className="mb-3 mt-3"><img src={process.env.PUBLIC_URL + '/assets/images/disasters.png'}  alt = 'disasters' />Disasters</h3>
               <Disasters></Disasters>
           </div>
-
-          <br></br>
-<SimpleMap/>
           <br></br>
 
           <div id='app'></div>
