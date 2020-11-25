@@ -39,7 +39,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    garbadge_bags: {
+    garbage_bags: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },

@@ -22,26 +22,26 @@ module.exports = function (app) {
     db.ReadyKit.findOne({ where: { currentUserName: req.params.currentUserName } })
       .then((result) => {
         if (result === null) {
-            db.ReadyKit.create({
-              currentUserName: req.params.currentUserName,
-              water: false,
-              non_perishable_food: false,
-              radio: false,
-              batteries: false,
-              flashlight: false,
-              first_aid_kit: false,
-              whistle: false,
-              dust_mask: false,
-              moist_towlettes: false,
-              garbadge_bags: false,
-              wrench: false,
-              can_opener: false,
-              local_map: false,
-              cash: false,
-              medications: false,
-            })
-              .then((result) => res.json(result))
-              .catch((err) => next(err));
+          db.ReadyKit.create({
+            currentUserName: req.params.currentUserName,
+            water: false,
+            non_perishable_food: false,
+            radio: false,
+            batteries: false,
+            flashlight: false,
+            first_aid_kit: false,
+            whistle: false,
+            dust_mask: false,
+            moist_towlettes: false,
+            garbage_bags: false,
+            wrench: false,
+            can_opener: false,
+            local_map: false,
+            cash: false,
+            medications: false,
+          })
+            .then((result) => res.json(result))
+            .catch((err) => next(err));
         }
         else {
           res.json(result);
@@ -50,26 +50,12 @@ module.exports = function (app) {
       .catch((err) => next(err));
   });
 
-  app.post('/api/readykit/create/:currentUserName', function (req, res, next) {
-    db.ReadyKit.create({
-      currentUserName: req.params.currentUserName,
-      water: false,
-      non_perishable_food: false,
-      radio: false,
-      batteries: false,
-      flashlight: false,
-      first_aid_kit: false,
-      whistle: false,
-      dust_mask: false,
-      moist_towlettes: false,
-      garbadge_bags: false,
-      wrench: false,
-      can_opener: false,
-      local_map: false,
-      cash: false,
-      medications: false,
-    })
+  app.put("/api/readykit/update/:currentUserName", function (req, res, next) {
+    db.ReadyKit.update(
+      req.body,
+      { where: { currentUserName: req.params.currentUserName } }
+    )
       .then((result) => res.json(result))
       .catch((err) => next(err));
-  });
+ });
 }

@@ -20,5 +20,9 @@ export default {
 
 
     return axios.get("https://data.cdc.gov/resource/9mfq-cb36.json?submission_date=" + dateAsOf + "T00:00:00.000&state=" + queryCovid);
+  },
+
+  updateReadyKitByUser: function(username, data) {
+    return axios.put("/api/readykit/update/" + username, data);
   }
 };
