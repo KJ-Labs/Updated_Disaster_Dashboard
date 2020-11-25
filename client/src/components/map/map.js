@@ -4,7 +4,7 @@ import Disasters from "../../utils/API";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-console.log("Disaster Text" + Disasters )
+console.log("Disaster Text" + JSON.stringify(Disasters))
 
 class SimpleMap extends Component {
   static defaultProps = {
