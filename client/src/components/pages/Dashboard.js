@@ -113,7 +113,7 @@ class Dashboard extends Component {
 
               <div className="card" id="ReadyKit">
                 <h2>{this.state.currentUserName}'s Ready Kit</h2>
-                <ReadyKit username={this.state.currentUserName}></ReadyKit>
+                SQL Database info here?
               </div>
             </div>
           </div>

@@ -11,9 +11,6 @@ body {
   );
 }
 
-h2 {
-  background-color: white;
-}
 
 .navbar-brand {
 
@@ -21,7 +18,7 @@ h2 {
   height: 80px;
   margin-bottom: 10px;
   color: white;
-  text-align: center;
+  text-align: right !important;
 }
 
 .wrapper {
@@ -39,9 +36,13 @@ footer {
 
 #nasa {
   font-size: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 #MetalsCards {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 #gold {
@@ -65,9 +66,9 @@ footer {
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
-  width: 36px;
+  width: 30px;
   height: 30px;
-  left: 26px;
+  left: 10px;
   top: 36px;
 }
 
@@ -97,7 +98,7 @@ Sidebar wrapper styles
 Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
 */
 .bm-menu-wrap {
-  top: 200px;
+  top: 110px;
 }
 /* General sidebar styles */
 .bm-menu {
@@ -128,7 +129,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-
+top: 198px !important;
   width: 90% !important;
 
 }
@@ -139,12 +140,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: #d1d1d1;
   margin-bottom: 10px;
   text-align: left;
-  text-decoration: none;
-  transition: color 0.2s;
+
 }
 
 .bm-item:hover {
   color: #ffffff;
+
 }
 
 #innerContainer {
@@ -158,4 +159,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 #Corgis {
   background-color: white;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#readyKit {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
 }
