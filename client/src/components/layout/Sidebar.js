@@ -9,11 +9,9 @@ export default props => {
 <div>
       <h2>Are you Ready?</h2>
       </div>
-      <br></br>
       <div className="menu-item" id = 'readyKit' >
      <ReadyKit/>
       </div>
-
       <h3>Need more data? </h3>
       <a className="menu-item" href="https://kj-labs.github.io/Earthquake_Tracker">
         Earthquake Tracker - Project 1

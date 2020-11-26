@@ -76,13 +76,29 @@ class Dashboard extends Component {
                   </ListItem>
                 </div>
               </div>
-
+              <div className="card" id="ReadyKit">
+                <h2>{this.state.currentUserName}'s Ready Kit</h2>
+                SQL Database info here? So they can see their most up to date kit?
+              </div>
+              <br></br>
               <div id="nasa"></div>
               <div className="card">
                 <Meteroids />
               </div>
               <br></br>
 
+              <div className="card" id="covid">
+                <h3 className="mb-3 mt-3">
+                <img
+                    src={process.env.PUBLIC_URL + "/assets/images/covid.png"}
+                    alt="covid"
+                  /> Covid-19 New Cases and Deaths
+                </h3>
+                <ListItem>
+                  <CovidSearchResults />
+                </ListItem>
+              </div>
+              <br></br>
               <div className="card" id="disaster">
                 <h3 className="mb-3 mt-3">
                   <img
@@ -96,25 +112,6 @@ class Dashboard extends Component {
                 <Disasters></Disasters>
               </div>
               <br></br>
-
-              <div className="card" id="covid">
-                <h3 className="mb-3 mt-3">
-                  Covid Data Here
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/images/covid.png"}
-                    alt="covid"
-                  />
-                </h3>
-                <ListItem>
-                  <CovidSearchResults />
-                </ListItem>
-              </div>
-              <br></br>
-
-              <div className="card" id="ReadyKit">
-                <h2>{this.state.currentUserName}'s Ready Kit</h2>
-                SQL Database info here?
-              </div>
             </div>
           </div>
         </div>

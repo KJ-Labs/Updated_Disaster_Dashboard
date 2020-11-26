@@ -41,8 +41,7 @@ class CovidSearchResults extends Component {
     console.log(this.state.result);
     return (
             <CovidCard
-              heading= "Search for a US State"
-            >
+              heading= "Search by US State">
               <CovidSearchForm
                 value={this.state.searchCovid}
                 handleInputChange={this.handleInputChange}

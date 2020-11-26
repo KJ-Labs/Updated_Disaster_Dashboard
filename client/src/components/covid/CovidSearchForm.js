@@ -4,7 +4,6 @@ function CovidSearchForm(props) {
   return (
     <form>
       <div className="form-group">
-        <label htmlFor="searchCovid">New COVID-19 Cases and New Deaths by State</label>
         <input
           value={props.value}
           onChange={props.handleInputChange}
