@@ -30,20 +30,17 @@ class Dashboard extends Component {
             <h1>Welcome {this.state.currentUserName} !</h1>
             <br></br>
             <div className="card" id="Corgis">
-                <h2>
-
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/images/corgi.png"}
-                    alt="corgi"
-                  />
-                  <Link to="/puppies">
-                    <button>Too Stressed? Look at Puppies!</button>
-                  </Link>
-                </h2>
-
+              <h2>
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/images/corgi.png"}
+                  alt="corgi"
+                />
+                <Link to="/puppies">
+                  <button>Too Stressed? Look at Puppies!</button>
+                </Link>
+              </h2>
             </div>
             <br></br>
-
 
             <div className="MetalsContainer">
               <div className="row" id="MetalsCards">
@@ -77,8 +74,12 @@ class Dashboard extends Component {
                 </div>
               </div>
               <div className="card" id="ReadyKit">
-                <h2>{this.state.currentUserName}'s Ready Kit</h2>
-                SQL Database info here? So they can see their most up to date kit?
+                <h2> <img
+                    src={process.env.PUBLIC_URL + "/assets/images/readyKit.png"}
+                    alt="covid"
+                  />{this.state.currentUserName}'s Ready Kit </h2>
+                SQL Database info here? So they can see their most up to date
+                kit?
               </div>
               <br></br>
               <div id="nasa"></div>
@@ -89,10 +90,11 @@ class Dashboard extends Component {
 
               <div className="card" id="covid">
                 <h3 className="mb-3 mt-3">
-                <img
+                  <img
                     src={process.env.PUBLIC_URL + "/assets/images/covid.png"}
                     alt="covid"
-                  /> Covid-19 New Cases and Deaths
+                  />
+                  Covid-19 New Cases and Deaths
                 </h3>
                 <ListItem>
                   <CovidSearchResults />

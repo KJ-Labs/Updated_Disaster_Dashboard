@@ -58,10 +58,10 @@ class Meteroid extends React.Component {
         {this.state.apiResults.length ? (
         <List>
 
-          <h3 className="mb-3 mt-3" ><img src={process.env.PUBLIC_URL + '/assets/images/comet.png'}  alt = 'meteroid'/> Meteor Events  </h3>
+          <h3 className="mb-3 mt-3" ><img src={process.env.PUBLIC_URL + '/assets/images/comet.png'}  alt = 'meteroid'/> Near Earth Events - Today </h3>
           {this.state.apiResults.map(result => (
       <ListItem key={result.id}>
-              Meteor Name:{result.Name} - Danger to Earth: {result.Hazardous.toUpperCase()} - Diameter: {result.MilesDiameter} Miles - Avoided Earth by: {result.MissEarth} Miles - Velocity: {result.VelocityMPH} MPH
+              Meteor Name:{result.Name} - Danger to Earth: {result.Hazardous.toUpperCase()} - Diameter: {result.MilesDiameter} Miles - Avoided Earth by: {result.MissEarth} Miles - Speed: {result.VelocityMPH} MPH
             </ListItem>
           ))}
         </List>
