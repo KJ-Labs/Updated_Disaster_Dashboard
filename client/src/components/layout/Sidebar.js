@@ -20,7 +20,7 @@ export default props => {
         Air Quality Tracker - Project 2
       </a>
       <br></br>
-      <a className="menu-item" href = 'http://localhost:3000/login'>
+      <a className="menu-item" href = '/login'>
       <button className="btn btn-light btn-lg" onClick={this.logout}>
             Logout
           </button>
