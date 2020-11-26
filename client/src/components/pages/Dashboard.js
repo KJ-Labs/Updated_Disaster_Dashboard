@@ -8,7 +8,6 @@ import Disasters from "../../components/disasters";
 import { ListItem } from "../list";
 import CovidSearchResults from "../covid/CovidSearchResults.js";
 import Sidebar from "../layout/Sidebar.js";
-import SimpleMap from "../map/map";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -102,13 +101,6 @@ class Dashboard extends Component {
                 </ListItem>
               </div>
               <br></br>
-
-              <div className="card" id="disaster">
-                <h3 className="mb-3 mt-3">
-                <SimpleMap/>
-                </h3>
-
-              </div>
               <div className="card" id="disaster">
                 <h3 className="mb-3 mt-3">
                   <img
