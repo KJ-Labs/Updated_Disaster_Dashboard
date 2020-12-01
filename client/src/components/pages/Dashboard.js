@@ -73,15 +73,6 @@ class Dashboard extends Component {
                   </ListItem>
                 </div>
               </div>
-              <div className="card" id="ReadyKit">
-                <h2> <img
-                    src={process.env.PUBLIC_URL + "/assets/images/readyKit.png"}
-                    alt="covid"
-                  />{this.state.currentUserName}'s Ready Kit </h2>
-                SQL Database info here? So they can see their most up to date
-                kit?
-              </div>
-              <br></br>
               <div id="nasa"></div>
               <div className="card">
                 <Meteroids />
