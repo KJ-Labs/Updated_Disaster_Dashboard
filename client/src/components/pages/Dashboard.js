@@ -25,7 +25,8 @@ class Dashboard extends Component {
             <Sidebar
               pageWrapId={"page-wrap"}
               outerContainerId={"outer-container"}
-            />
+              userName={this.state.currentUserName}>
+              </Sidebar>
             <h1>Welcome {this.state.currentUserName} !</h1>
             <br></br>
             <div className="card" id="Corgis">
@@ -40,6 +41,7 @@ class Dashboard extends Component {
               </h2>
             </div>
             <br></br>
+
             <div className="MetalsContainer">
               <div className="row" id="MetalsCards">
                 <div className="col s6 m6 l6 card" id="gold">
