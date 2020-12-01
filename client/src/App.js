@@ -40,7 +40,7 @@ class App extends Component {
                 )}
               />
               <Route path="/implicit/callback" component={ImplicitCallback} />
-              <SecureRoute path="/puppies" exact={true} component={RandomGif} />
+              <Route path="/puppies" exact={true} component={RandomGif} />
             </div>
           </div>
         </Security>

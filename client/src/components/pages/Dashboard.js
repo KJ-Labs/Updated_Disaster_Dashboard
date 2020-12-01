@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import ReadyKit from "../readykit";
 import Gold from "../metals/gold.js";
 import Silver from "../metals/silver.js";
 import Meteroids from "../meteroids/meteroids.js";
@@ -73,6 +72,7 @@ class Dashboard extends Component {
                   </ListItem>
                 </div>
               </div>
+
               <div id="nasa"></div>
               <div className="card">
                 <Meteroids />
