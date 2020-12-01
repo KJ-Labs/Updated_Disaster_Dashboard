@@ -14,7 +14,7 @@ export default props => {
       <h2>{this.state.currentUserName} Are you Ready?</h2>
       </div>
       <div className="menu-item" id = 'readyKit' >
-     <ReadyKit/>
+      <ReadyKit username={this.state.currentUserName}></ReadyKit>
       </div>
       <h3>Need more data? </h3>
       <a className="menu-item" href="https://kj-labs.github.io/Earthquake_Tracker">

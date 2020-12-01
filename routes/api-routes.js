@@ -1,5 +1,7 @@
 const db = require("../models");
 const getDisasterEvents = require('./api/disaster.js');
+const ReadyKit = require('../client/src/components/readykit/index.js')
+
 
 module.exports = function (app) {
   app.get('/api/disasters', function (req, res, next) {
@@ -23,7 +25,7 @@ module.exports = function (app) {
       .then((result) => {
         if (result === null) {
           db.ReadyKit.create({
-            currentUserName: req.params.currentUserName,
+            currentUserName: req.body.currentUserName,
             water: false,
             non_perishable_food: false,
             radio: false,
@@ -52,7 +54,7 @@ module.exports = function (app) {
 
   app.put("/api/readykit/update/:currentUserName", function (req, res, next) {
     db.ReadyKit.update(
-      req.body,
+      req.params,
       { where: { currentUserName: req.params.currentUserName } }
     )
       .then((result) => res.json(result))

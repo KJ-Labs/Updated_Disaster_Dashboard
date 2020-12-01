@@ -40,7 +40,6 @@ class Dashboard extends Component {
               </h2>
             </div>
             <br></br>
-
             <div className="MetalsContainer">
               <div className="row" id="MetalsCards">
                 <div className="col s6 m6 l6 card" id="gold">
