@@ -32,7 +32,6 @@
     "install": "^0.13.0",
     "mysql2": "^2.2.5",
     "node": "^15.2.1",
-    "okta": "^1.0.0",
     "react-burger-menu": "^2.7.1",
     "react-google-charts": "^3.0.15",
     "sequelize": "^6.3.5"
