@@ -4,8 +4,9 @@ import { bubble as Menu } from 'react-burger-menu';
 import ReadyKit from "../readykit";
 
 class Sidebar extends React.Component{
-
-
+  constructor(props) {
+    super(props);
+  }
 
   render() {
 
@@ -13,7 +14,7 @@ class Sidebar extends React.Component{
     <Menu>
 
       <div>
-        <h2> Are you Ready?</h2>
+        <h2>{this.props.userName} Are you Ready?</h2>
       </div>
       <div className="menu-item" id='readyKit' >
         <ReadyKit userName={this.props.userName}></ReadyKit>
