@@ -12,5 +12,8 @@ account2@gmail.com
 GenericPassword12!!
 
 
+words
+
+
 Heroku DB:
 To create own heroku database use the guide (MVC/supplemental/MyHerokuDeploymentProcess.pdf) and don't forget to set the JAWSDB_URL config.
