@@ -21,7 +21,9 @@ We utilized multiple APIS including [EONET-NASA](https://eonet.sci.gsfc.nasa.gov
 - Heroku: https://disaster-list-dashboard.herokuapp.com/Dashboard
   - Email: testaccount@gmail.com
   - Password: GenericPassword12!
-
+OR 
+- Email: account2@gmail.com 
+- Password: GenericPassword12!!
 
 ## Demo
 - ![Git](screenshot.PNG)  
@@ -38,7 +40,7 @@ We utilized multiple APIS including [EONET-NASA](https://eonet.sci.gsfc.nasa.gov
 - [OKTA](https://www.okta.com/?utm_campaign=search_google_amer_us_ao_it_branded-okta_exact&utm_source=google&utm_medium=cpc&utm_term=okta&utm_page={url}&gclid=EAIaIQobChMIm96dr46u7QIVoj6tBh05_wo6EAAYASAAEgJsfPD_BwE)
 
 ## Installation
-Installation is not needed, as the entire application is on Heroku. Please use the General Account to login. (testaccount@gmail.com, GenericPassword12!)
+Installation is not needed, as the entire application is on Heroku. Please use the General Account to login here > https://disaster-list-dashboard.herokuapp.com/Dashboard . (testaccount@gmail.com, GenericPassword12!)
 If you want to download the github and use it on your local, please clone the repository, run npm install, update your SQL password/login info in the config folder and then create an ENV file for the Gold, Meteroid and Puppy APIs, then run NPM start. 
 
 ## Usage
