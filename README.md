@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=green)](https://choosealicense.com/licenses/mit/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/)
 
-Our third and final project is the final installation in the Bunker Bundle. The Disaster Dashboard encompasses a full-stack development project utilizing the MERN Stack. The Disaster Dashboard allows you to see disasters happening currently, near earth events that could harm earth, current COVID-19 Statistics, the current price of Gold and Silver, and a checklist that allows you to verify you have the items needed to survive a disaster. Finally, as a stress reliever to all of that information, users can see random puppy gifs to help relax. 
+Our third and final project is the final installation in the Bunker Bundle. The Disaster Dashboard encompasses a full-stack development utilizing the MERN Stack. The Disaster Dashboard allows you to see current disasters, near earth events, current COVID-19 Statistics, the current price of Gold and Silver, and a checklist that allows you to verify you have the items needed to survive a disaster. Finally, to help decompress after seeing all of this information, the user can look at puppy gifs to help relax. 
 
 We utilized multiple APIS including [EONET-NASA](https://eonet.sci.gsfc.nasa.gov/api/v3/) (Disasters), [CDC](https://data.cdc.gov/resource/) (Covid),  [NEO-NASA](https://api.nasa.gov/neo/) (Near Earth Objects), [GOLDAPI](https://www.goldapi.io/api/) (Gold & Silver), [PUPPIES](https://api.giphy.com/v1/gifs/) (Puppies), to help provide updated data to concerned citizens about critical information on and near Earth. 
 
@@ -23,11 +23,10 @@ We utilized multiple APIS including [EONET-NASA](https://eonet.sci.gsfc.nasa.gov
   - Email: testaccount@gmail.com
   - Password: GenericPassword12!
 OR 
-- Email: account2@gmail.com 
-- Password: GenericPassword12!!
+  - Email: account2@gmail.com 
+  - Password: GenericPassword12!!
 
-## Demo
-- ![Git](screenshot.PNG)  
+
 
 ## Technologies
 - [React](https://reactjs.org/)
@@ -53,6 +52,6 @@ This repository is protected under the [MIT](https://choosealicense.com/licenses
 ## Contribution
 Please contribute to this project by opening a Pull Request and following the `eslint` rules and the [Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
 
-## Screenshots
-![Git](screenshot.PNG)  
+## Presentation PDF
+![Git]([presentation].PNG)  
 Card images are from Canva professional.
