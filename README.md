@@ -22,7 +22,9 @@ We utilized multiple APIS including [EONET-NASA](https://eonet.sci.gsfc.nasa.gov
 - Heroku: https://disaster-list-dashboard.herokuapp.com/Dashboard
   - Email: testaccount@gmail.com
   - Password: GenericPassword12!
+
 OR 
+
   - Email: account2@gmail.com 
   - Password: GenericPassword12!!
 
@@ -54,4 +56,4 @@ Please contribute to this project by opening a Pull Request and following the `e
 
 ## Presentation PDF
 ![Git](presentation.PNG)  
-Card images are from Canva professional.
+Card images are from Canva professional. Data is not meant as professional advice, please validate any recommendations/data with a licensed professional. 
