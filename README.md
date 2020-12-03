@@ -53,5 +53,5 @@ This repository is protected under the [MIT](https://choosealicense.com/licenses
 Please contribute to this project by opening a Pull Request and following the `eslint` rules and the [Code of Conduct](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
 
 ## Presentation PDF
-![Git]([presentation].PNG)  
+![Git](presentation.PNG)  
 Card images are from Canva professional.
