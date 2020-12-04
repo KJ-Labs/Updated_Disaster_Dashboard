@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Stocks extends React.Component {
+class Gold extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -44,4 +44,4 @@ fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
 
 
 
-export default Stocks;
+export default Gold;
