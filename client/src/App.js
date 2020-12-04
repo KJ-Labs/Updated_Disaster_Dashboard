@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Security, SecureRoute, ImplicitCallback} from '@okta/okta-react';
 
 
 import Navbar from './components/layout/Navbar';
@@ -8,13 +8,12 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/pages/Home';
 import Dashboard from './components/pages/Dashboard';
 import Login from './components/auth/Login';
-import RandomGif from './components/pages/Puppies.js'
+import RandomGif from './components/pages/Puppies.js';
 
 import './App.css';
 
-function onAuthRequired({ history }) {
+function onAuthRequired({history}) {
   history.push('/login');
-
 }
 
 class App extends Component {

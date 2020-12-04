@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -9,11 +9,8 @@ class Navbar extends Component {
           <Link className="navbar-brand" to="/">
             Disaster Dashboard
           </Link>
-
-
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Dashboard">

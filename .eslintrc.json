@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "google"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+      "linebreak-style": [
+        "error",
+        "windows"
+    ],
+    "quotes": [
+        "error",
+        "single"
+    ],
+    "indent": [
+        "error",
+        2
+    ],
+    "max-len": [
+        "error",
+        140
+    ],
+    "comma-dangle": "off",
+    "require-jsdoc": "off",
+    "react/prop-types": "off"
+    }
+}

@@ -1,4 +1,4 @@
-import API from "../../utils/API";
+import API from '../../utils/API';
 import React from 'react';
 
 class ReadyKit extends React.Component {
@@ -20,10 +20,10 @@ class ReadyKit extends React.Component {
       local_map: false,
       cash: false,
       medications: false
-    }
+    };
 
     API.getReadyKitByUser(this.props.userName)
-      .then(res => this.setState(res.data))
+      .then((res) => this.setState(res.data))
       .catch(console.err);
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -36,16 +36,16 @@ class ReadyKit extends React.Component {
   }
 
   handleInputChange(event) {
-    this.setState({ [event.target.name]: event.target.checked }, this.sendStateChangeToBackend);
+    this.setState({[event.target.name]: event.target.checked}, this.sendStateChangeToBackend);
   }
 
   render() {
-
     return (
       <div>
         <input type="checkbox" name="water" onChange={this.handleInputChange} checked={this.state.water} /> Water
         <br></br>
-        <input type="checkbox" name="non_perishable_food" onChange={this.handleInputChange} checked={this.state.non_perishable_food} /> Non-perishable food
+        <input type="checkbox" name="non_perishable_food" onChange={this.handleInputChange}
+          checked={this.state.non_perishable_food} /> Non-perishable food
         <br></br>
         <input type="checkbox" name="radio" onChange={this.handleInputChange} checked={this.state.radio} /> Radio
         <br></br>
@@ -59,7 +59,8 @@ class ReadyKit extends React.Component {
         <br></br>
         <input type="checkbox" name="dust_mask" onChange={this.handleInputChange} checked={this.state.dust_mask} /> Dust Mask
         <br></br>
-        <input type="checkbox" name="moist_towlettes" onChange={this.handleInputChange} checked={this.state.moist_towlettes} /> Moist Towlettes
+        <input type="checkbox" name="moist_towlettes" onChange={this.handleInputChange}
+          checked={this.state.moist_towlettes} /> Moist Towlettes
         <br></br>
         <input type="checkbox" name="garbage_bags" onChange={this.handleInputChange} checked={this.state.garbage_bags} /> Garbage Bag
         <br></br>

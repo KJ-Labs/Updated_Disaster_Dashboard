@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 import SignInWidget from './SignInWidget';
-import { withAuth } from '@okta/okta-react';
+import {withAuth} from '@okta/okta-react';
 
 export default withAuth(
   class Login extends Component {
@@ -10,13 +10,14 @@ export default withAuth(
       this.state = {
         authenticated: null
       };
+      this.onSuccess = this.onSuccess.bind(this);
       this.checkAuthentication();
     }
 
     async checkAuthentication() {
       const authenticated = await this.props.auth.isAuthenticated();
       if (authenticated !== this.state.authenticated) {
-        this.setState({ authenticated });
+        this.setState({authenticated});
       }
     }
 
@@ -24,20 +25,20 @@ export default withAuth(
       this.checkAuthentication();
     }
 
-    onSuccess = res => {
+    onSuccess(res) {
       return this.props.auth.redirect({
         sessionToken: res.session.token
       });
     };
 
-    onError = err => {
+    onError(err) {
       console.log('error logging in', err);
     };
 
     render() {
       if (this.state.authenticated === null) return null;
       return this.state.authenticated ? (
-        <Redirect to={{ pathname: '/' }} />
+        <Redirect to={{pathname: '/'}} />
       ) : (
         <SignInWidget
           baseUrl={this.props.baseUrl}

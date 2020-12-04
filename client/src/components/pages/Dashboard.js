@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Gold from "../metals/gold.js";
-import Silver from "../metals/silver.js";
-import Meteroids from "../meteroids/meteroids.js";
-import Disasters from "../../components/disasters";
-import { ListItem } from "../list";
-import CovidSearchResults from "../covid/CovidSearchResults.js";
-import Sidebar from "../layout/Sidebar.js";
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import Gold from '../metals/gold.js';
+import Silver from '../metals/silver.js';
+import Meteroids from '../meteroids/meteroids.js';
+import Disasters from '../../components/disasters';
+import {ListItem} from '../list';
+import CovidSearchResults from '../covid/CovidSearchResults.js';
+import Sidebar from '../layout/Sidebar.js';
 
 class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUserName: JSON.parse(localStorage.getItem("okta-token-storage"))
+      currentUserName: JSON.parse(localStorage.getItem('okta-token-storage'))
         .idToken.claims.name,
     };
   }
@@ -23,16 +23,16 @@ class Dashboard extends Component {
         <div id="innerContainer">
           <div className="App" id="outer-container">
             <Sidebar
-              pageWrapId={"page-wrap"}
-              outerContainerId={"outer-container"}
+              pageWrapId={'page-wrap'}
+              outerContainerId={'outer-container'}
               userName={this.state.currentUserName}>
-              </Sidebar>
+            </Sidebar>
             <h1>Welcome {this.state.currentUserName} !</h1>
             <br></br>
             <div className="card" id="Corgis">
               <h2>
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/images/corgi.png"}
+                  src={process.env.PUBLIC_URL + '/assets/images/corgi.png'}
                   alt="corgi"
                 />
                 <Link to="/puppies">
@@ -48,7 +48,7 @@ class Dashboard extends Component {
                   <h3 className="mb-3 mt-3">
                     <img
                       src={
-                        process.env.PUBLIC_URL + "/assets/images/goldbars.png"
+                        process.env.PUBLIC_URL + '/assets/images/goldbars.png'
                       }
                       alt="goldbars"
                     />
@@ -62,7 +62,7 @@ class Dashboard extends Component {
                   <h3 className="mb-3 mt-3">
                     <img
                       src={
-                        process.env.PUBLIC_URL + "/assets/images/silverbars.png"
+                        process.env.PUBLIC_URL + '/assets/images/silverbars.png'
                       }
                       alt="silverbars"
                     />
@@ -83,7 +83,7 @@ class Dashboard extends Component {
               <div className="card" id="covid">
                 <h3 className="mb-3 mt-3">
                   <img
-                    src={process.env.PUBLIC_URL + "/assets/images/covid.png"}
+                    src={process.env.PUBLIC_URL + '/assets/images/covid.png'}
                     alt="covid"
                   />
                   Covid-19 New Cases and Deaths
@@ -97,7 +97,7 @@ class Dashboard extends Component {
                 <h3 className="mb-3 mt-3">
                   <img
                     src={
-                      process.env.PUBLIC_URL + "/assets/images/disasters.png"
+                      process.env.PUBLIC_URL + '/assets/images/disasters.png'
                     }
                     alt="disasters"
                   />

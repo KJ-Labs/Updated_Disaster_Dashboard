@@ -1,7 +1,7 @@
-import API from "../../utils/API";
-import { Card, ListGroup } from 'react-bootstrap';
-import { BiGlobe, BiCalendarExclamation } from "react-icons/bi";
-import { FaHouseDamage } from "react-icons/fa";
+import API from '../../utils/API';
+import {Card, ListGroup} from 'react-bootstrap';
+import {BiGlobe, BiCalendarExclamation} from 'react-icons/bi';
+import {FaHouseDamage} from 'react-icons/fa';
 import React from 'react';
 
 
@@ -15,8 +15,8 @@ class Disasters extends React.Component {
 
   componentDidMount() {
     API.getDisasters()
-      .then(res => this.setState({ disasters: res.data }))
-      .catch(err => console.log(err));
+      .then((res) => this.setState({disasters: res.data}))
+      .catch((err) => console.log(err));
   }
 
   render() {

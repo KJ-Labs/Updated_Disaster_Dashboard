@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var ReadyKit = sequelize.define("ReadyKit", {
+  const ReadyKit = sequelize.define('ReadyKit', {
     currentUserName: {
       type: DataTypes.STRING
     },
