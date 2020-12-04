@@ -26,7 +26,7 @@ export default {
     const queryEndDate = yyyyE + "-" + mmE + "-" + ddE;
 
 
-    return axios.get("https://data.cdc.gov/resource/9mfq-cb36.json?$where=submission_datebetween2020-01-22T00:00:00.000AND2020-01-22T00:00:00.000&state=" + queryCovid);
+    return axios.get("https://data.cdc.gov/resource/9mfq-cb36.json?$where=submission_date between '" + queryStartDate + "T00:00:00.000' and '" + queryEndDate + "T00:00:00.000'&state=" + queryCovid);
   },
 
   updateReadyKitByUser: function(username, data) {
