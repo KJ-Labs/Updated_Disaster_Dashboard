@@ -15,10 +15,9 @@ class Silver extends React.Component {
     this.loadImage();
   }
 
-  //Commenting out just to avoid hitting cap before presentation
   loadImage() {
 var myHeaders = new Headers();
-myHeaders.append("x-access-token",  'process.env.REACT_APP_METALAPIS');
+myHeaders.append("x-access-token",  process.env.REACT_APP_METALAPIS);
 myHeaders.append("Content-Type", "application/json");
 
 var requestOptions = {
