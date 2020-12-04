@@ -34,7 +34,7 @@ fetch("https://www.goldapi.io/api/XAG/USD", requestOptions)
   render() {
     return(
       <div className='card-item'>
-          <h1>{ '$' +  this.state.apiResults.price + ' USD'} </h1>
+          <h1>{ '$' +  Number(this.state.apiResults.price).toLocaleString('en',{minimumFractionDigits: 2,maximumFractionDigits: 2}) + ' USD'} </h1>
       </div>
     );
   }
