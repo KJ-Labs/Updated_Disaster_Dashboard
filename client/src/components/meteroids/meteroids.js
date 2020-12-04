@@ -54,7 +54,6 @@ class Meteroid extends React.Component {
   render() {
     return (
       <div>
-        {/* { <p>{JSON.stringify(this.state.apiResults.Name)}</p>} */}
         {this.state.apiResults.length ? (
         <List>
 
