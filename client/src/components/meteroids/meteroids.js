@@ -10,6 +10,7 @@ class Meteroid extends React.Component {
       apiKey: `${process.env.REACT_APP_METEORS}`,
       apiResults: [],
       todayDate : '2020-12-04'
+
     };
   }
   componentDidMount() {
