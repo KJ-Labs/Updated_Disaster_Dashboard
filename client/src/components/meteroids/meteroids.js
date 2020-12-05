@@ -9,8 +9,7 @@ class Meteroid extends React.Component {
     this.state = {
       apiKey: `${process.env.REACT_APP_METEORS}`,
       apiResults: [],
-      todayDate : '2020-12-04'
-
+      todayDate : moment().format('YYYY-MM-DD')
     };
   }
   componentDidMount() {
@@ -21,10 +20,10 @@ class Meteroid extends React.Component {
       method: 'GET',
       redirect: 'follow'
     };
-    fetch('https://api.nasa.gov/neo/rest/v1/feed' +
-      `?start_date=${this.state.todayDate}` +
-      `&end_date=${this.state.todayDate}` +
-      `&api_key=${this.state.apiKey}`, requestOptions)
+   fetch('https://api.nasa.gov/neo/rest/v1/feed' +
+    `?start_date=${this.state.todayDate}` +
+    `&end_date=${this.state.todayDate}` +
+    `&api_key=${this.state.apiKey}`, requestOptions)
       .then((response) => response.text())
       .then((result) => this.setState({apiResults: JSON.parse(result)}))
       .then((result) => {
@@ -74,7 +73,7 @@ class Meteroid extends React.Component {
             ))}
           </List>
         ) : (
-          <h3>Nothin happenin in space...</h3>
+          <h3> Nothin happenin in space today...</h3>
         )}
       </div>
     );
