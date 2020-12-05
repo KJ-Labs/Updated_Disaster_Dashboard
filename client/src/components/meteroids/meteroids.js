@@ -1,5 +1,5 @@
 import React from 'react';
-
+import moment from 'moment';
 import {ListItem, List} from '../list';
 
 
@@ -9,7 +9,7 @@ class Meteroid extends React.Component {
     this.state = {
       apiKey: `${process.env.REACT_APP_METEORS}`,
       apiResults: [],
-      todayDate: new Date().toISOString().slice(0, 10),
+      todayDate : moment().format('YYYY-MM-DD')
     };
   }
   componentDidMount() {
